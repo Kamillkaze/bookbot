@@ -4,8 +4,14 @@ def main():
     num_words = count_words(text)
     num_characters = count_characters(text)
     list_num_characters = convert_dict_to_sorted_list(num_characters)
+    print_report(book_path, num_words, list_num_characters)
+
+def print_report(book_path, num_words, num_chars):
+    print(f"--- Begin report of {book_path} ---")
     print(f"{num_words} words found in the document\n")
-    print(f"map of characters count: {list_num_characters}")
+    for entry in num_chars:
+        print(f"The \'{entry["char"]}\' character was found {entry["count"]} times")
+    print("--- End report ---")
 
 def get_book_text(path):
     with open(path) as f:
