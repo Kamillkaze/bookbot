@@ -7,11 +7,11 @@ def main():
     print_report(book_path, num_words, list_num_characters)
 
 def print_report(book_path, num_words, num_chars):
-    print(f"--- Begin report of {book_path} ---")
+    print(f"\n--- Begin report of {book_path} ---\n")
     print(f"{num_words} words found in the document\n")
     for entry in num_chars:
         print(f"The \'{entry["char"]}\' character was found {entry["count"]} times")
-    print("--- End report ---")
+    print("\n--- End report ---\n")
 
 def get_book_text(path):
     with open(path) as f:
