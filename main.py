@@ -1,5 +1,6 @@
 def main():
-    book_path = "books/frankenstein.txt"
+    print("Type in a file path below and press enter:")
+    book_path = input().strip()
     text = get_book_text(book_path)
     num_words = count_words(text)
     num_characters = count_characters(text)
